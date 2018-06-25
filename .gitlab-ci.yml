@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  image: tgalopin/maven-javafx
+  stage: build
+  before_script:
+  script:
+    - 'mvn clean install'
+  artifacts:
+    paths:
+    - target/*.jar
